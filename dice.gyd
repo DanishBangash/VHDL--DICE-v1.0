@@ -1,0 +1,28 @@
+Pin Freeze File:  version M.63c
+
+957244 XC9572-7-PC44
+button S:PIN36
+clk S:PIN35
+LEDs<5> S:PIN9
+LEDs<0> S:PIN37
+LEDs<4> S:PIN14
+LEDs<1> S:PIN3
+LEDs<3> S:PIN44
+LEDs<2> S:PIN11
+LEDs<6> S:PIN8
+
+
+;The remaining section of the .gyd file is for documentation purposes only.
+;It shows where your internal equations were placed in the last successful fit.
+
+PARTITION FB1_6 LEDs_1_OBUF$BUF0
+PARTITION FB1_12 tmp_Q<0> Inst_activator/crst_FSM_FFd2 Inst_activator/crst_FSM_FFd1 LEDs_6_OBUF
+		 tmp_Q<2> LEDs_0_OBUF tmp_Q<1>
+PARTITION FB2_6 LEDs_0_OBUF$BUF0
+PARTITION FB2_17 LEDs_2_OBUF
+
+PARTITION FB3_2 LEDs_2_OBUF$BUF0
+PARTITION FB3_9 LEDs_1_OBUF
+
+
+

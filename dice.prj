@@ -1,0 +1,4 @@
+vhdl work "decoder.vhd"
+vhdl work "counter.vhd"
+vhdl work "activator.vhd"
+vhdl work "dice.vhd"

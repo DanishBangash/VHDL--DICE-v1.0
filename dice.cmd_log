@@ -1,0 +1,79 @@
+xst -ise "C:/Users/BR/Desktop/dice/dice.ise" -intstyle ise -ifn "C:/Users/BR/Desktop/dice/dice.xst" -ofn "C:/Users/BR/Desktop/dice/dice.syr"
+ngdbuild -ise "C:/Users/BR/Desktop/dice/dice.ise" -intstyle ise -dd _ngo  -i -p xc9572-PC44-7 "dice.ngc" dice.ngd
+ngdbuild -ise "C:/Users/BR/Desktop/dice/dice.ise" -intstyle ise -dd _ngo  -i -p xc9572-PC44-7 "dice.ngc" dice.ngd
+cpldfit -ise "C:/Users/BR/Desktop/dice/dice.ise" -intstyle ise -p xc9572-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 36 -pterms 25 -power std -localfbk -pinfbk dice.ngd
+XSLTProcess -ise "C:/Users/BR/Desktop/dice/dice.ise" dice_build.xml
+tsim -ise "C:/Users/BR/Desktop/dice/dice.ise" -intstyle ise dice dice.nga
+taengine -ise "C:/Users/BR/Desktop/dice/dice.ise" -intstyle ise -f dice -w --format html1 -l C:/Users/BR/Desktop/dice/dice_html/tim/timing_report.htm
+hprep6 -ise "C:/Users/BR/Desktop/dice/dice.ise" -s IEEE1149 -n dice -i dice
+ngdbuild -ise "C:/Users/BR/Desktop/dice/dice.ise" -intstyle ise -dd _ngo  -i -p xc9572-PC44-7 "dice.ngc" dice.ngd
+cpldfit -ise "C:/Users/BR/Desktop/dice/dice.ise" -intstyle ise -p xc9572-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 36 -pterms 25 -power std -localfbk -pinfbk dice.ngd
+XSLTProcess -ise "C:/Users/BR/Desktop/dice/dice.ise" dice_build.xml
+tsim -ise "C:/Users/BR/Desktop/dice/dice.ise" -intstyle ise dice dice.nga
+taengine -ise "C:/Users/BR/Desktop/dice/dice.ise" -intstyle ise -f dice -w --format html1 -l C:/Users/BR/Desktop/dice/dice_html/tim/timing_report.htm
+hprep6 -ise "C:/Users/BR/Desktop/dice/dice.ise" -s IEEE1149 -n dice -i dice
+ngdbuild -ise "C:/Users/BR/Desktop/dice/dice.ise" -intstyle ise -dd _ngo  -i -p xc9572-PC44-7 "dice.ngc" dice.ngd
+ngdbuild -ise "C:/Users/BR/Desktop/dice/dice.ise" -intstyle ise -dd _ngo  -i -p xc9572-PC44-7 "dice.ngc" dice.ngd
+cpldfit -ise "C:/Users/BR/Desktop/dice/dice.ise" -intstyle ise -p xc9572-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 36 -pterms 25 -power std -localfbk -pinfbk dice.ngd
+XSLTProcess -ise "C:/Users/BR/Desktop/dice/dice.ise" dice_build.xml
+tsim -ise "C:/Users/BR/Desktop/dice/dice.ise" -intstyle ise dice dice.nga
+taengine -ise "C:/Users/BR/Desktop/dice/dice.ise" -intstyle ise -f dice -w --format html1 -l C:/Users/BR/Desktop/dice/dice_html/tim/timing_report.htm
+hprep6 -ise "C:/Users/BR/Desktop/dice/dice.ise" -s IEEE1149 -n dice -i dice
+xst -intstyle ise -ifn "C:/Users/Dani/Desktop/VHDL code - DICE/dice.xst" -ofn "C:/Users/Dani/Desktop/VHDL code - DICE/dice.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc dice.ucf -p xc9572-PC44-7 "dice.ngc" dice.ngd  
+cpldfit -intstyle ise -p xc9572-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 36 -pterms 25 -power std -localfbk -pinfbk dice.ngd 
+XSLTProcess dice_build.xml 
+tsim -intstyle ise dice dice.nga 
+taengine -intstyle ise -f dice -w --format html1 -l dice_html/tim/timing_report.htm 
+hprep6 -s IEEE1149 -n dice -i dice 
+xst -intstyle ise -ifn "C:/Users/Dani/Desktop/VHDL code - DICE/dice.xst" -ofn "C:/Users/Dani/Desktop/VHDL code - DICE/dice.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc dice.ucf -p xc9572-PC44-7 "dice.ngc" dice.ngd  
+cpldfit -intstyle ise -p xc9572-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 36 -pterms 25 -power std -localfbk -pinfbk dice.ngd 
+XSLTProcess dice_build.xml 
+tsim -intstyle ise dice dice.nga 
+hprep6 -s IEEE1149 -n dice -i dice 
+cpldfit -intstyle ise -p xc9572-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 36 -pterms 25 -power std -localfbk -pinfbk dice.ngd 
+XSLTProcess dice_build.xml 
+tsim -intstyle ise dice dice.nga 
+hprep6 -s IEEE1149 -n dice -i dice 
+ngdbuild -intstyle ise -dd _ngo -uc dice.ucf -p xc9572-PC44-7 "dice.ngc" dice.ngd  
+cpldfit -intstyle ise -p xc9572-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 36 -pterms 25 -power std -localfbk -pinfbk dice.ngd 
+XSLTProcess dice_build.xml 
+tsim -intstyle ise dice dice.nga 
+hprep6 -s IEEE1149 -n dice -i dice 
+cpldfit -intstyle ise -p xc9572-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 36 -pterms 25 -power std -localfbk -pinfbk dice.ngd 
+XSLTProcess dice_build.xml 
+tsim -intstyle ise dice dice.nga 
+xst -intstyle ise -ifn "C:/Users/Dani/Desktop/VHDL code - DICE/dice.xst" -ofn "C:/Users/Dani/Desktop/VHDL code - DICE/dice.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc dice.ucf -p xc9572-PC44-7 "dice.ngc" dice.ngd  
+cpldfit -intstyle ise -p xc9572-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 36 -pterms 25 -power std -localfbk -pinfbk dice.ngd 
+XSLTProcess dice_build.xml 
+tsim -intstyle ise dice dice.nga 
+hprep6 -s IEEE1149 -n dice -i dice 
+xst -intstyle ise -ifn "C:/Users/Dani/Desktop/VHDL code - DICE/dice.xst" -ofn "C:/Users/Dani/Desktop/VHDL code - DICE/dice.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc dice.ucf -p xc9572-PC44-7 "dice.ngc" dice.ngd  
+cpldfit -intstyle ise -p xc9572-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 36 -pterms 25 -power std -localfbk -pinfbk dice.ngd 
+XSLTProcess dice_build.xml 
+tsim -intstyle ise dice dice.nga 
+hprep6 -s IEEE1149 -n dice -i dice 
+xst -intstyle ise -ifn "C:/Users/Dani/Desktop/VHDL code - DICE/dice.xst" -ofn "C:/Users/Dani/Desktop/VHDL code - DICE/dice.syr" 
+xst -intstyle ise -ifn "C:/Users/Dani/Desktop/VHDL code - DICE/dice.xst" -ofn "C:/Users/Dani/Desktop/VHDL code - DICE/dice.syr" 
+xst -intstyle ise -ifn "C:/Users/Dani/Desktop/VHDL code - DICE/dice.xst" -ofn "C:/Users/Dani/Desktop/VHDL code - DICE/dice.syr" 
+xst -intstyle ise -ifn "C:/Users/Dani/Desktop/VHDL code - DICE/dice.xst" -ofn "C:/Users/Dani/Desktop/VHDL code - DICE/dice.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc dice.ucf -p xc9572-PC44-7 "dice.ngc" dice.ngd  
+cpldfit -intstyle ise -p xc9572-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 36 -pterms 25 -power std -localfbk -pinfbk dice.ngd 
+XSLTProcess dice_build.xml 
+tsim -intstyle ise dice dice.nga 
+hprep6 -s IEEE1149 -n dice -i dice 
+xst -intstyle ise -ifn "C:/Users/Dani/Desktop/VHDL code - DICE/dice.xst" -ofn "C:/Users/Dani/Desktop/VHDL code - DICE/dice.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc dice.ucf -p xc9572-PC44-7 "dice.ngc" dice.ngd  
+cpldfit -intstyle ise -p xc9572-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 36 -pterms 25 -power std -localfbk -pinfbk dice.ngd 
+XSLTProcess dice_build.xml 
+tsim -intstyle ise dice dice.nga 
+hprep6 -s IEEE1149 -n dice -i dice 
+xst -intstyle ise -ifn "C:/Users/Dani/Desktop/VHDL code - DICE/dice.xst" -ofn "C:/Users/Dani/Desktop/VHDL code - DICE/dice.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc dice.ucf -p xc9572-PC44-7 "dice.ngc" dice.ngd  
+cpldfit -intstyle ise -p xc9572-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 36 -pterms 25 -power std -localfbk -pinfbk dice.ngd 
+XSLTProcess dice_build.xml 
+tsim -intstyle ise dice dice.nga 
+hprep6 -s IEEE1149 -n dice -i dice 

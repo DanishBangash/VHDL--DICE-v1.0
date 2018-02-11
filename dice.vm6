@@ -1,0 +1,576 @@
+NDS Database:  version M.63c
+
+NDS_INFO | xc9500 | 957244 | XC9572-7-PC44
+
+DEVICE | 9572 | 957244 | 
+
+NETWORK | dice | 0 | 0 | 201342983
+
+INPUT_INSTANCE | 0 | 0 | NULL | clk_IBUF | dice_COPY_0_COPY_0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | clk | 848 | PI | 0 | 0 | dice_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | clk_IBUF | 827 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 0 | 5 | II_IMUX
+
+MACROCELL_INSTANCE | PrldLow+Tff+OptxMapped+ClkInv | tmp_Q<0> | dice_COPY_0_COPY_0 | 2222986240 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Inst_activator/crst_FSM_FFd1.FBK | 907 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | Inst_activator/crst_FSM_FFd1.Q | Inst_activator/crst_FSM_FFd1 | 5 | 0 | MC_FBK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clk_IBUF | 827 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Inst_activator/crst_FSM_FFd2.FBK | 906 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | Inst_activator/crst_FSM_FFd2.Q | Inst_activator/crst_FSM_FFd2 | 5 | 0 | MC_FBK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | tmp_Q<0> | 828 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<0>.Q | tmp_Q<0> | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 5 | 0 | MC_FBK
+NODE | tmp_Q<0>.FBK | 908 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<0>.Q | tmp_Q<0> | 5 | 0 | MC_FBK
+
+SIGNAL_INSTANCE | tmp_Q<0>.SI | tmp_Q<0> | 0 | 3 | 4
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Inst_activator/crst_FSM_FFd1.FBK | 907 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | Inst_activator/crst_FSM_FFd1.Q | Inst_activator/crst_FSM_FFd1 | 5 | 0 | MC_FBK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clk_IBUF | 827 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Inst_activator/crst_FSM_FFd2.FBK | 906 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | Inst_activator/crst_FSM_FFd2.Q | Inst_activator/crst_FSM_FFd2 | 5 | 0 | MC_FBK
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | tmp_Q<0>.D1 | 851 | ? | 0 | 0 | tmp_Q<0> | NULL | NULL | tmp_Q<0>.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | tmp_Q<0>.D2 | 852 | ? | 0 | 4096 | tmp_Q<0> | NULL | NULL | tmp_Q<0>.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | Inst_activator/crst_FSM_FFd2.FBK | IV_FALSE | Inst_activator/crst_FSM_FFd1.FBK
+OUTPUT_NODE_TYPE | 3 | 9 | MC_SI_CLKF
+SIGNAL | NODE | tmp_Q<0>.CLKF | 853 | ? | 0 | 4096 | tmp_Q<0> | NULL | NULL | tmp_Q<0>.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_TRUE | clk_IBUF
+OUTPUT_NODE_TYPE | 6 | 9 | MC_SI_RSTF
+SIGNAL | NODE | tmp_Q<0>.RSTF | 854 | ? | 0 | 4096 | tmp_Q<0> | NULL | NULL | tmp_Q<0>.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 1 | IV_FALSE | Inst_activator/crst_FSM_FFd2.FBK
+
+SRFF_INSTANCE | tmp_Q<0>.REG | tmp_Q<0> | 0 | 3 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | tmp_Q<0>.D | 850 | ? | 0 | 0 | tmp_Q<0> | NULL | NULL | tmp_Q<0>.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | tmp_Q<0>.CLKF | 853 | ? | 0 | 4096 | tmp_Q<0> | NULL | NULL | tmp_Q<0>.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_TRUE | clk_IBUF
+INPUT_NODE_TYPE | 3 | 8 | SRFF_R
+SIGNAL | NODE | tmp_Q<0>.RSTF | 854 | ? | 0 | 4096 | tmp_Q<0> | NULL | NULL | tmp_Q<0>.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 1 | IV_FALSE | Inst_activator/crst_FSM_FFd2.FBK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | tmp_Q<0>.Q | 855 | ? | 0 | 0 | tmp_Q<0> | NULL | NULL | tmp_Q<0>.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+Tff+OptxMapped+ClkInv | tmp_Q<1> | dice_COPY_0_COPY_0 | 2222986240 | 6 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Inst_activator/crst_FSM_FFd2.FBK | 906 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | Inst_activator/crst_FSM_FFd2.Q | Inst_activator/crst_FSM_FFd2 | 5 | 0 | MC_FBK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Inst_activator/crst_FSM_FFd1.FBK | 907 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | Inst_activator/crst_FSM_FFd1.Q | Inst_activator/crst_FSM_FFd1 | 5 | 0 | MC_FBK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<1>.FBK | 909 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<1>.Q | tmp_Q<1> | 5 | 0 | MC_FBK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<2>.FBK | 910 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<2>.Q | tmp_Q<2> | 5 | 0 | MC_FBK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clk_IBUF | 827 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<0>.FBK | 908 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<0>.Q | tmp_Q<0> | 5 | 0 | MC_FBK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | tmp_Q<1> | 829 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<1>.Q | tmp_Q<1> | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 5 | 0 | MC_FBK
+NODE | tmp_Q<1>.FBK | 909 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<1>.Q | tmp_Q<1> | 5 | 0 | MC_FBK
+
+SIGNAL_INSTANCE | tmp_Q<1>.SI | tmp_Q<1> | 0 | 6 | 4
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Inst_activator/crst_FSM_FFd2.FBK | 906 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | Inst_activator/crst_FSM_FFd2.Q | Inst_activator/crst_FSM_FFd2 | 5 | 0 | MC_FBK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Inst_activator/crst_FSM_FFd1.FBK | 907 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | Inst_activator/crst_FSM_FFd1.Q | Inst_activator/crst_FSM_FFd1 | 5 | 0 | MC_FBK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<1>.FBK | 909 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<1>.Q | tmp_Q<1> | 5 | 0 | MC_FBK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<2>.FBK | 910 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<2>.Q | tmp_Q<2> | 5 | 0 | MC_FBK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clk_IBUF | 827 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<0>.FBK | 908 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<0>.Q | tmp_Q<0> | 5 | 0 | MC_FBK
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | tmp_Q<1>.D1 | 857 | ? | 0 | 4096 | tmp_Q<1> | NULL | NULL | tmp_Q<1>.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | tmp_Q<1>.D2 | 858 | ? | 0 | 4096 | tmp_Q<1> | NULL | NULL | tmp_Q<1>.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 3 | IV_TRUE | Inst_activator/crst_FSM_FFd2.FBK | IV_FALSE | Inst_activator/crst_FSM_FFd1.FBK | IV_TRUE | tmp_Q<0>.FBK
+SPPTERM | 4 | IV_TRUE | Inst_activator/crst_FSM_FFd2.FBK | IV_FALSE | Inst_activator/crst_FSM_FFd1.FBK | IV_TRUE | tmp_Q<1>.FBK | IV_TRUE | tmp_Q<2>.FBK
+OUTPUT_NODE_TYPE | 3 | 9 | MC_SI_CLKF
+SIGNAL | NODE | tmp_Q<1>.CLKF | 859 | ? | 0 | 4096 | tmp_Q<1> | NULL | NULL | tmp_Q<1>.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_TRUE | clk_IBUF
+OUTPUT_NODE_TYPE | 6 | 9 | MC_SI_RSTF
+SIGNAL | NODE | tmp_Q<1>.RSTF | 860 | ? | 0 | 4096 | tmp_Q<1> | NULL | NULL | tmp_Q<1>.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 1 | IV_FALSE | Inst_activator/crst_FSM_FFd2.FBK
+
+SRFF_INSTANCE | tmp_Q<1>.REG | tmp_Q<1> | 0 | 3 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | tmp_Q<1>.D | 856 | ? | 0 | 0 | tmp_Q<1> | NULL | NULL | tmp_Q<1>.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | tmp_Q<1>.CLKF | 859 | ? | 0 | 4096 | tmp_Q<1> | NULL | NULL | tmp_Q<1>.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_TRUE | clk_IBUF
+INPUT_NODE_TYPE | 3 | 8 | SRFF_R
+SIGNAL | NODE | tmp_Q<1>.RSTF | 860 | ? | 0 | 4096 | tmp_Q<1> | NULL | NULL | tmp_Q<1>.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 1 | IV_FALSE | Inst_activator/crst_FSM_FFd2.FBK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | tmp_Q<1>.Q | 861 | ? | 0 | 0 | tmp_Q<1> | NULL | NULL | tmp_Q<1>.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+Tff+OptxMapped+ClkInv | tmp_Q<2> | dice_COPY_0_COPY_0 | 2222986240 | 6 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<1>.FBK | 909 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<1>.Q | tmp_Q<1> | 5 | 0 | MC_FBK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Inst_activator/crst_FSM_FFd2.FBK | 906 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | Inst_activator/crst_FSM_FFd2.Q | Inst_activator/crst_FSM_FFd2 | 5 | 0 | MC_FBK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Inst_activator/crst_FSM_FFd1.FBK | 907 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | Inst_activator/crst_FSM_FFd1.Q | Inst_activator/crst_FSM_FFd1 | 5 | 0 | MC_FBK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<2>.FBK | 910 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<2>.Q | tmp_Q<2> | 5 | 0 | MC_FBK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clk_IBUF | 827 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<0>.FBK | 908 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<0>.Q | tmp_Q<0> | 5 | 0 | MC_FBK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | tmp_Q<2> | 830 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<2>.Q | tmp_Q<2> | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 5 | 0 | MC_FBK
+NODE | tmp_Q<2>.FBK | 910 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<2>.Q | tmp_Q<2> | 5 | 0 | MC_FBK
+
+SIGNAL_INSTANCE | tmp_Q<2>.SI | tmp_Q<2> | 0 | 6 | 4
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<1>.FBK | 909 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<1>.Q | tmp_Q<1> | 5 | 0 | MC_FBK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Inst_activator/crst_FSM_FFd2.FBK | 906 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | Inst_activator/crst_FSM_FFd2.Q | Inst_activator/crst_FSM_FFd2 | 5 | 0 | MC_FBK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Inst_activator/crst_FSM_FFd1.FBK | 907 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | Inst_activator/crst_FSM_FFd1.Q | Inst_activator/crst_FSM_FFd1 | 5 | 0 | MC_FBK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<2>.FBK | 910 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<2>.Q | tmp_Q<2> | 5 | 0 | MC_FBK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clk_IBUF | 827 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<0>.FBK | 908 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<0>.Q | tmp_Q<0> | 5 | 0 | MC_FBK
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | tmp_Q<2>.D1 | 863 | ? | 0 | 4096 | tmp_Q<2> | NULL | NULL | tmp_Q<2>.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | tmp_Q<2>.D2 | 864 | ? | 0 | 4096 | tmp_Q<2> | NULL | NULL | tmp_Q<2>.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 4 | IV_TRUE | Inst_activator/crst_FSM_FFd2.FBK | IV_FALSE | Inst_activator/crst_FSM_FFd1.FBK | IV_TRUE | tmp_Q<0>.FBK | IV_TRUE | tmp_Q<1>.FBK
+SPPTERM | 4 | IV_TRUE | Inst_activator/crst_FSM_FFd2.FBK | IV_FALSE | Inst_activator/crst_FSM_FFd1.FBK | IV_TRUE | tmp_Q<1>.FBK | IV_TRUE | tmp_Q<2>.FBK
+OUTPUT_NODE_TYPE | 3 | 9 | MC_SI_CLKF
+SIGNAL | NODE | tmp_Q<2>.CLKF | 865 | ? | 0 | 4096 | tmp_Q<2> | NULL | NULL | tmp_Q<2>.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_TRUE | clk_IBUF
+OUTPUT_NODE_TYPE | 6 | 9 | MC_SI_RSTF
+SIGNAL | NODE | tmp_Q<2>.RSTF | 866 | ? | 0 | 4096 | tmp_Q<2> | NULL | NULL | tmp_Q<2>.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 1 | IV_FALSE | Inst_activator/crst_FSM_FFd2.FBK
+
+SRFF_INSTANCE | tmp_Q<2>.REG | tmp_Q<2> | 0 | 3 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | tmp_Q<2>.D | 862 | ? | 0 | 0 | tmp_Q<2> | NULL | NULL | tmp_Q<2>.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | tmp_Q<2>.CLKF | 865 | ? | 0 | 4096 | tmp_Q<2> | NULL | NULL | tmp_Q<2>.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_TRUE | clk_IBUF
+INPUT_NODE_TYPE | 3 | 8 | SRFF_R
+SIGNAL | NODE | tmp_Q<2>.RSTF | 866 | ? | 0 | 4096 | tmp_Q<2> | NULL | NULL | tmp_Q<2>.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 1 | IV_FALSE | Inst_activator/crst_FSM_FFd2.FBK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | tmp_Q<2>.Q | 867 | ? | 0 | 0 | tmp_Q<2> | NULL | NULL | tmp_Q<2>.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | OptxMapped | LEDs_0_OBUF | dice_COPY_0_COPY_0 | 2155872256 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<2>.FBK | 910 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<2>.Q | tmp_Q<2> | 5 | 0 | MC_FBK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<0>.FBK | 908 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<0>.Q | tmp_Q<0> | 5 | 0 | MC_FBK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<1>.FBK | 909 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<1>.Q | tmp_Q<1> | 5 | 0 | MC_FBK
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | LEDs_0_OBUF$Q | 831 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | LEDs_0_OBUF.Q | LEDs_0_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | LEDs_0_OBUF.UIM | 911 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | LEDs_0_OBUF.Q | LEDs_0_OBUF | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | LEDs_0_OBUF.SI | LEDs_0_OBUF | 0 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<2>.FBK | 910 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<2>.Q | tmp_Q<2> | 5 | 0 | MC_FBK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<0>.FBK | 908 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<0>.Q | tmp_Q<0> | 5 | 0 | MC_FBK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<1>.FBK | 909 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<1>.Q | tmp_Q<1> | 5 | 0 | MC_FBK
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | LEDs_0_OBUF.D1 | 869 | ? | 0 | 4096 | LEDs_0_OBUF | NULL | NULL | LEDs_0_OBUF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | LEDs_0_OBUF.D2 | 870 | ? | 0 | 4096 | LEDs_0_OBUF | NULL | NULL | LEDs_0_OBUF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_FALSE | tmp_Q<0>.FBK | IV_TRUE | tmp_Q<2>.FBK
+SPPTERM | 2 | IV_FALSE | tmp_Q<1>.FBK | IV_TRUE | tmp_Q<2>.FBK
+
+SRFF_INSTANCE | LEDs_0_OBUF.REG | LEDs_0_OBUF | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | LEDs_0_OBUF.D | 868 | ? | 0 | 0 | LEDs_0_OBUF | NULL | NULL | LEDs_0_OBUF.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | LEDs_0_OBUF.Q | 871 | ? | 0 | 0 | LEDs_0_OBUF | NULL | NULL | LEDs_0_OBUF.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | OptxMapped | LEDs_1_OBUF | dice_COPY_0_COPY_0 | 2155872256 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<0> | 828 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<0>.Q | tmp_Q<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<1> | 829 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<1>.Q | tmp_Q<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<2> | 830 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<2>.Q | tmp_Q<2> | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | LEDs_1_OBUF$Q | 832 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | LEDs_1_OBUF.Q | LEDs_1_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | LEDs_1_OBUF.UIM | 912 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | LEDs_1_OBUF.Q | LEDs_1_OBUF | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | LEDs_1_OBUF.SI | LEDs_1_OBUF | 0 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<0> | 828 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<0>.Q | tmp_Q<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<1> | 829 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<1>.Q | tmp_Q<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<2> | 830 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<2>.Q | tmp_Q<2> | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | LEDs_1_OBUF.D1 | 873 | ? | 0 | 4096 | LEDs_1_OBUF | NULL | NULL | LEDs_1_OBUF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | LEDs_1_OBUF.D2 | 874 | ? | 0 | 4096 | LEDs_1_OBUF | NULL | NULL | LEDs_1_OBUF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 3 | IV_FALSE | tmp_Q<0> | IV_TRUE | tmp_Q<1> | IV_TRUE | tmp_Q<2>
+
+SRFF_INSTANCE | LEDs_1_OBUF.REG | LEDs_1_OBUF | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | LEDs_1_OBUF.D | 872 | ? | 0 | 0 | LEDs_1_OBUF | NULL | NULL | LEDs_1_OBUF.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | LEDs_1_OBUF.Q | 875 | ? | 0 | 0 | LEDs_1_OBUF | NULL | NULL | LEDs_1_OBUF.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | Inv+OptxMapped | LEDs_2_OBUF | dice_COPY_0_COPY_0 | 2155872512 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<1> | 829 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<1>.Q | tmp_Q<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<2> | 830 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<2>.Q | tmp_Q<2> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<0> | 828 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<0>.Q | tmp_Q<0> | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | LEDs_2_OBUF$Q | 833 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | LEDs_2_OBUF.Q | LEDs_2_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | LEDs_2_OBUF.UIM | 913 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | LEDs_2_OBUF.Q | LEDs_2_OBUF | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | LEDs_2_OBUF.SI | LEDs_2_OBUF | 0 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<1> | 829 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<1>.Q | tmp_Q<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<2> | 830 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<2>.Q | tmp_Q<2> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<0> | 828 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<0>.Q | tmp_Q<0> | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | LEDs_2_OBUF.D1 | 877 | ? | 0 | 4096 | LEDs_2_OBUF | NULL | NULL | LEDs_2_OBUF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | LEDs_2_OBUF.D2 | 878 | ? | 0 | 4096 | LEDs_2_OBUF | NULL | NULL | LEDs_2_OBUF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_FALSE | tmp_Q<1> | IV_FALSE | tmp_Q<2>
+SPPTERM | 3 | IV_TRUE | tmp_Q<0> | IV_TRUE | tmp_Q<1> | IV_TRUE | tmp_Q<2>
+
+SRFF_INSTANCE | LEDs_2_OBUF.REG | LEDs_2_OBUF | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | LEDs_2_OBUF.D | 876 | ? | 0 | 0 | LEDs_2_OBUF | NULL | NULL | LEDs_2_OBUF.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | LEDs_2_OBUF.Q | 879 | ? | 0 | 0 | LEDs_2_OBUF | NULL | NULL | LEDs_2_OBUF.REG | 0 | 8 | SRFF_Q
+
+INPUT_INSTANCE | 0 | 0 | NULL | button_IBUF | dice_COPY_0_COPY_0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | button | 849 | PI | 0 | 0 | dice_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | button_IBUF | 836 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | NULL | button_IBUF | 0 | 5 | II_IMUX
+
+MACROCELL_INSTANCE | PrldLow+OptxMapped+ClkInv | Inst_activator/crst_FSM_FFd2 | dice_COPY_0_COPY_0 | 2222982144 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Inst_activator/crst_FSM_FFd1.FBK | 907 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | Inst_activator/crst_FSM_FFd1.Q | Inst_activator/crst_FSM_FFd1 | 5 | 0 | MC_FBK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | button_IBUF | 836 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | NULL | button_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clk_IBUF | 827 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Inst_activator/crst_FSM_FFd2.FBK | 906 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | Inst_activator/crst_FSM_FFd2.Q | Inst_activator/crst_FSM_FFd2 | 5 | 0 | MC_FBK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | Inst_activator/crst_FSM_FFd2 | 834 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | Inst_activator/crst_FSM_FFd2.Q | Inst_activator/crst_FSM_FFd2 | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 5 | 0 | MC_FBK
+NODE | Inst_activator/crst_FSM_FFd2.FBK | 906 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | Inst_activator/crst_FSM_FFd2.Q | Inst_activator/crst_FSM_FFd2 | 5 | 0 | MC_FBK
+
+SIGNAL_INSTANCE | Inst_activator/crst_FSM_FFd2.SI | Inst_activator/crst_FSM_FFd2 | 0 | 4 | 3
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Inst_activator/crst_FSM_FFd1.FBK | 907 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | Inst_activator/crst_FSM_FFd1.Q | Inst_activator/crst_FSM_FFd1 | 5 | 0 | MC_FBK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | button_IBUF | 836 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | NULL | button_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clk_IBUF | 827 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Inst_activator/crst_FSM_FFd2.FBK | 906 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | Inst_activator/crst_FSM_FFd2.Q | Inst_activator/crst_FSM_FFd2 | 5 | 0 | MC_FBK
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Inst_activator/crst_FSM_FFd2.D1 | 881 | ? | 0 | 4096 | Inst_activator/crst_FSM_FFd2 | NULL | NULL | Inst_activator/crst_FSM_FFd2.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Inst_activator/crst_FSM_FFd2.D2 | 882 | ? | 0 | 4096 | Inst_activator/crst_FSM_FFd2 | NULL | NULL | Inst_activator/crst_FSM_FFd2.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | button_IBUF | IV_FALSE | Inst_activator/crst_FSM_FFd1.FBK
+SPPTERM | 2 | IV_FALSE | button_IBUF | IV_TRUE | Inst_activator/crst_FSM_FFd2.FBK
+OUTPUT_NODE_TYPE | 3 | 9 | MC_SI_CLKF
+SIGNAL | NODE | Inst_activator/crst_FSM_FFd2.CLKF | 883 | ? | 0 | 4096 | Inst_activator/crst_FSM_FFd2 | NULL | NULL | Inst_activator/crst_FSM_FFd2.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_TRUE | clk_IBUF
+
+SRFF_INSTANCE | Inst_activator/crst_FSM_FFd2.REG | Inst_activator/crst_FSM_FFd2 | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Inst_activator/crst_FSM_FFd2.D | 880 | ? | 0 | 0 | Inst_activator/crst_FSM_FFd2 | NULL | NULL | Inst_activator/crst_FSM_FFd2.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | Inst_activator/crst_FSM_FFd2.CLKF | 883 | ? | 0 | 4096 | Inst_activator/crst_FSM_FFd2 | NULL | NULL | Inst_activator/crst_FSM_FFd2.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_TRUE | clk_IBUF
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Inst_activator/crst_FSM_FFd2.Q | 884 | ? | 0 | 0 | Inst_activator/crst_FSM_FFd2 | NULL | NULL | Inst_activator/crst_FSM_FFd2.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+OptxMapped+ClkInv | Inst_activator/crst_FSM_FFd1 | dice_COPY_0_COPY_0 | 2222982144 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Inst_activator/crst_FSM_FFd1.FBK | 907 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | Inst_activator/crst_FSM_FFd1.Q | Inst_activator/crst_FSM_FFd1 | 5 | 0 | MC_FBK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | button_IBUF | 836 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | NULL | button_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clk_IBUF | 827 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Inst_activator/crst_FSM_FFd2.FBK | 906 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | Inst_activator/crst_FSM_FFd2.Q | Inst_activator/crst_FSM_FFd2 | 5 | 0 | MC_FBK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | Inst_activator/crst_FSM_FFd1 | 835 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | Inst_activator/crst_FSM_FFd1.Q | Inst_activator/crst_FSM_FFd1 | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 5 | 0 | MC_FBK
+NODE | Inst_activator/crst_FSM_FFd1.FBK | 907 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | Inst_activator/crst_FSM_FFd1.Q | Inst_activator/crst_FSM_FFd1 | 5 | 0 | MC_FBK
+
+SIGNAL_INSTANCE | Inst_activator/crst_FSM_FFd1.SI | Inst_activator/crst_FSM_FFd1 | 0 | 4 | 3
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Inst_activator/crst_FSM_FFd1.FBK | 907 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | Inst_activator/crst_FSM_FFd1.Q | Inst_activator/crst_FSM_FFd1 | 5 | 0 | MC_FBK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | button_IBUF | 836 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | NULL | button_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clk_IBUF | 827 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Inst_activator/crst_FSM_FFd2.FBK | 906 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | Inst_activator/crst_FSM_FFd2.Q | Inst_activator/crst_FSM_FFd2 | 5 | 0 | MC_FBK
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Inst_activator/crst_FSM_FFd1.D1 | 886 | ? | 0 | 4096 | Inst_activator/crst_FSM_FFd1 | NULL | NULL | Inst_activator/crst_FSM_FFd1.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Inst_activator/crst_FSM_FFd1.D2 | 887 | ? | 0 | 4096 | Inst_activator/crst_FSM_FFd1 | NULL | NULL | Inst_activator/crst_FSM_FFd1.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | button_IBUF | IV_TRUE | Inst_activator/crst_FSM_FFd1.FBK
+SPPTERM | 2 | IV_FALSE | button_IBUF | IV_TRUE | Inst_activator/crst_FSM_FFd2.FBK
+OUTPUT_NODE_TYPE | 3 | 9 | MC_SI_CLKF
+SIGNAL | NODE | Inst_activator/crst_FSM_FFd1.CLKF | 888 | ? | 0 | 4096 | Inst_activator/crst_FSM_FFd1 | NULL | NULL | Inst_activator/crst_FSM_FFd1.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_TRUE | clk_IBUF
+
+SRFF_INSTANCE | Inst_activator/crst_FSM_FFd1.REG | Inst_activator/crst_FSM_FFd1 | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Inst_activator/crst_FSM_FFd1.D | 885 | ? | 0 | 0 | Inst_activator/crst_FSM_FFd1 | NULL | NULL | Inst_activator/crst_FSM_FFd1.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | Inst_activator/crst_FSM_FFd1.CLKF | 888 | ? | 0 | 4096 | Inst_activator/crst_FSM_FFd1 | NULL | NULL | Inst_activator/crst_FSM_FFd1.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_TRUE | clk_IBUF
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Inst_activator/crst_FSM_FFd1.Q | 889 | ? | 0 | 0 | Inst_activator/crst_FSM_FFd1 | NULL | NULL | Inst_activator/crst_FSM_FFd1.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | OptxMapped | LEDs_6_OBUF | dice_COPY_0_COPY_0 | 2155872256 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<1>.FBK | 909 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<1>.Q | tmp_Q<1> | 5 | 0 | MC_FBK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<2>.FBK | 910 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<2>.Q | tmp_Q<2> | 5 | 0 | MC_FBK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<0>.FBK | 908 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<0>.Q | tmp_Q<0> | 5 | 0 | MC_FBK
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | LEDs_6_OBUF | 837 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | LEDs_6_OBUF.Q | LEDs_6_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | LEDs_6_OBUF.UIM | 914 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | LEDs_6_OBUF.Q | LEDs_6_OBUF | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | LEDs_6_OBUF.SI | LEDs_6_OBUF | 0 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<1>.FBK | 909 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<1>.Q | tmp_Q<1> | 5 | 0 | MC_FBK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<2>.FBK | 910 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<2>.Q | tmp_Q<2> | 5 | 0 | MC_FBK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<0>.FBK | 908 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<0>.Q | tmp_Q<0> | 5 | 0 | MC_FBK
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | LEDs_6_OBUF.D1 | 891 | ? | 0 | 4096 | LEDs_6_OBUF | NULL | NULL | LEDs_6_OBUF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | LEDs_6_OBUF.D2 | 892 | ? | 0 | 4096 | LEDs_6_OBUF | NULL | NULL | LEDs_6_OBUF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | tmp_Q<0>.FBK | IV_FALSE | tmp_Q<1>.FBK
+SPPTERM | 2 | IV_TRUE | tmp_Q<0>.FBK | IV_FALSE | tmp_Q<2>.FBK
+
+SRFF_INSTANCE | LEDs_6_OBUF.REG | LEDs_6_OBUF | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | LEDs_6_OBUF.D | 890 | ? | 0 | 0 | LEDs_6_OBUF | NULL | NULL | LEDs_6_OBUF.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | LEDs_6_OBUF.Q | 893 | ? | 0 | 0 | LEDs_6_OBUF | NULL | NULL | LEDs_6_OBUF.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | OptxMapped | LEDs_0_OBUF$BUF0 | dice_COPY_0_COPY_0 | 2155872256 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<1> | 829 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<1>.Q | tmp_Q<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<2> | 830 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<2>.Q | tmp_Q<2> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<0> | 828 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<0>.Q | tmp_Q<0> | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | LEDs_0_OBUF$BUF0 | 838 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | LEDs_0_OBUF$BUF0.Q | LEDs_0_OBUF$BUF0 | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | LEDs_0_OBUF$BUF0.UIM | 915 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | LEDs_0_OBUF$BUF0.Q | LEDs_0_OBUF$BUF0 | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | LEDs_0_OBUF$BUF0.SI | LEDs_0_OBUF$BUF0 | 0 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<1> | 829 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<1>.Q | tmp_Q<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<2> | 830 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<2>.Q | tmp_Q<2> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<0> | 828 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<0>.Q | tmp_Q<0> | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | LEDs_0_OBUF$BUF0.D1 | 895 | ? | 0 | 4096 | LEDs_0_OBUF$BUF0 | NULL | NULL | LEDs_0_OBUF$BUF0.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | LEDs_0_OBUF$BUF0.D2 | 896 | ? | 0 | 4096 | LEDs_0_OBUF$BUF0 | NULL | NULL | LEDs_0_OBUF$BUF0.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_FALSE | tmp_Q<0> | IV_TRUE | tmp_Q<2>
+SPPTERM | 2 | IV_FALSE | tmp_Q<1> | IV_TRUE | tmp_Q<2>
+
+SRFF_INSTANCE | LEDs_0_OBUF$BUF0.REG | LEDs_0_OBUF$BUF0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | LEDs_0_OBUF$BUF0.D | 894 | ? | 0 | 0 | LEDs_0_OBUF$BUF0 | NULL | NULL | LEDs_0_OBUF$BUF0.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | LEDs_0_OBUF$BUF0.Q | 897 | ? | 0 | 0 | LEDs_0_OBUF$BUF0 | NULL | NULL | LEDs_0_OBUF$BUF0.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | OptxMapped | LEDs_1_OBUF$BUF0 | dice_COPY_0_COPY_0 | 2155872256 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<1>.FBK | 909 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<1>.Q | tmp_Q<1> | 5 | 0 | MC_FBK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<2>.FBK | 910 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<2>.Q | tmp_Q<2> | 5 | 0 | MC_FBK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<0>.FBK | 908 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<0>.Q | tmp_Q<0> | 5 | 0 | MC_FBK
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | LEDs_1_OBUF$BUF0 | 839 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | LEDs_1_OBUF$BUF0.Q | LEDs_1_OBUF$BUF0 | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | LEDs_1_OBUF$BUF0.UIM | 916 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | LEDs_1_OBUF$BUF0.Q | LEDs_1_OBUF$BUF0 | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | LEDs_1_OBUF$BUF0.SI | LEDs_1_OBUF$BUF0 | 0 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<1>.FBK | 909 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<1>.Q | tmp_Q<1> | 5 | 0 | MC_FBK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<2>.FBK | 910 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<2>.Q | tmp_Q<2> | 5 | 0 | MC_FBK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<0>.FBK | 908 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<0>.Q | tmp_Q<0> | 5 | 0 | MC_FBK
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | LEDs_1_OBUF$BUF0.D1 | 899 | ? | 0 | 4096 | LEDs_1_OBUF$BUF0 | NULL | NULL | LEDs_1_OBUF$BUF0.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | LEDs_1_OBUF$BUF0.D2 | 900 | ? | 0 | 4096 | LEDs_1_OBUF$BUF0 | NULL | NULL | LEDs_1_OBUF$BUF0.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 3 | IV_FALSE | tmp_Q<0>.FBK | IV_TRUE | tmp_Q<1>.FBK | IV_TRUE | tmp_Q<2>.FBK
+
+SRFF_INSTANCE | LEDs_1_OBUF$BUF0.REG | LEDs_1_OBUF$BUF0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | LEDs_1_OBUF$BUF0.D | 898 | ? | 0 | 0 | LEDs_1_OBUF$BUF0 | NULL | NULL | LEDs_1_OBUF$BUF0.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | LEDs_1_OBUF$BUF0.Q | 901 | ? | 0 | 0 | LEDs_1_OBUF$BUF0 | NULL | NULL | LEDs_1_OBUF$BUF0.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | Inv+OptxMapped | LEDs_2_OBUF$BUF0 | dice_COPY_0_COPY_0 | 2155872512 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<1> | 829 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<1>.Q | tmp_Q<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<2> | 830 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<2>.Q | tmp_Q<2> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<0> | 828 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<0>.Q | tmp_Q<0> | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | LEDs_2_OBUF$BUF0 | 840 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | LEDs_2_OBUF$BUF0.Q | LEDs_2_OBUF$BUF0 | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | LEDs_2_OBUF$BUF0.UIM | 917 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | LEDs_2_OBUF$BUF0.Q | LEDs_2_OBUF$BUF0 | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | LEDs_2_OBUF$BUF0.SI | LEDs_2_OBUF$BUF0 | 0 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<1> | 829 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<1>.Q | tmp_Q<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<2> | 830 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<2>.Q | tmp_Q<2> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | tmp_Q<0> | 828 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | tmp_Q<0>.Q | tmp_Q<0> | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | LEDs_2_OBUF$BUF0.D1 | 903 | ? | 0 | 4096 | LEDs_2_OBUF$BUF0 | NULL | NULL | LEDs_2_OBUF$BUF0.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | LEDs_2_OBUF$BUF0.D2 | 904 | ? | 0 | 4096 | LEDs_2_OBUF$BUF0 | NULL | NULL | LEDs_2_OBUF$BUF0.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_FALSE | tmp_Q<1> | IV_FALSE | tmp_Q<2>
+SPPTERM | 3 | IV_TRUE | tmp_Q<0> | IV_TRUE | tmp_Q<1> | IV_TRUE | tmp_Q<2>
+
+SRFF_INSTANCE | LEDs_2_OBUF$BUF0.REG | LEDs_2_OBUF$BUF0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | LEDs_2_OBUF$BUF0.D | 902 | ? | 0 | 0 | LEDs_2_OBUF$BUF0 | NULL | NULL | LEDs_2_OBUF$BUF0.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | LEDs_2_OBUF$BUF0.Q | 905 | ? | 0 | 0 | LEDs_2_OBUF$BUF0 | NULL | NULL | LEDs_2_OBUF$BUF0.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | LEDs<5> | dice_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | LEDs_0_OBUF$Q | 831 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | LEDs_0_OBUF.Q | LEDs_0_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | LEDs<5> | 841 | PO | 0 | 0 | dice_COPY_0_COPY_0 | NULL | NULL | LEDs<5> | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | LEDs<4> | dice_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | LEDs_1_OBUF$Q | 832 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | LEDs_1_OBUF.Q | LEDs_1_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | LEDs<4> | 842 | PO | 0 | 0 | dice_COPY_0_COPY_0 | NULL | NULL | LEDs<4> | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | LEDs<3> | dice_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | LEDs_2_OBUF$Q | 833 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | LEDs_2_OBUF.Q | LEDs_2_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | LEDs<3> | 843 | PO | 0 | 0 | dice_COPY_0_COPY_0 | NULL | NULL | LEDs<3> | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | LEDs<6> | dice_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | LEDs_6_OBUF | 837 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | LEDs_6_OBUF.Q | LEDs_6_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | LEDs<6> | 844 | PO | 0 | 0 | dice_COPY_0_COPY_0 | NULL | NULL | LEDs<6> | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | LEDs<0> | dice_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | LEDs_0_OBUF$BUF0 | 838 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | LEDs_0_OBUF$BUF0.Q | LEDs_0_OBUF$BUF0 | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | LEDs<0> | 845 | PO | 0 | 0 | dice_COPY_0_COPY_0 | NULL | NULL | LEDs<0> | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | LEDs<1> | dice_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | LEDs_1_OBUF$BUF0 | 839 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | LEDs_1_OBUF$BUF0.Q | LEDs_1_OBUF$BUF0 | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | LEDs<1> | 846 | PO | 0 | 0 | dice_COPY_0_COPY_0 | NULL | NULL | LEDs<1> | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | LEDs<2> | dice_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | LEDs_2_OBUF$BUF0 | 840 | ? | 0 | 0 | dice_COPY_0_COPY_0 | NULL | LEDs_2_OBUF$BUF0.Q | LEDs_2_OBUF$BUF0 | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | LEDs<2> | 847 | PO | 0 | 0 | dice_COPY_0_COPY_0 | NULL | NULL | LEDs<2> | 0 | 6 | OI_OUT
+
+FB_INSTANCE | FOOBAR1_ | dice_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 6 | LEDs_1_OBUF$BUF0 | 1 | NULL | 0 | LEDs<1> | 1 | 3 | 49152
+FBPIN | 12 | tmp_Q<0> | 1 | NULL | 0 | NULL | 0
+FBPIN | 13 | Inst_activator/crst_FSM_FFd2 | 1 | NULL | 0 | NULL | 0
+FBPIN | 14 | Inst_activator/crst_FSM_FFd1 | 1 | NULL | 0 | NULL | 0 | 7 | 57344
+FBPIN | 15 | LEDs_6_OBUF | 1 | NULL | 0 | LEDs<6> | 1 | 8 | 49152
+FBPIN | 16 | tmp_Q<2> | 1 | NULL | 0 | NULL | 0
+FBPIN | 17 | LEDs_0_OBUF | 1 | NULL | 0 | LEDs<5> | 1 | 9 | 49152
+FBPIN | 18 | tmp_Q<1> | 1 | NULL | 0 | NULL | 0
+
+FB_INSTANCE | FOOBAR2_ | dice_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 2 | NULL | 0 | clk_IBUF | 1 | NULL | 0 | 35 | 49152
+FBPIN | 5 | NULL | 0 | button_IBUF | 1 | NULL | 0 | 36 | 49152
+FBPIN | 6 | LEDs_0_OBUF$BUF0 | 1 | NULL | 0 | LEDs<0> | 1 | 37 | 49152
+FBPIN | 17 | LEDs_2_OBUF | 1 | NULL | 0 | LEDs<3> | 1 | 44 | 49152
+
+FB_INSTANCE | FOOBAR3_ | dice_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 2 | LEDs_2_OBUF$BUF0 | 1 | NULL | 0 | LEDs<2> | 1 | 11 | 49152
+FBPIN | 9 | LEDs_1_OBUF | 1 | NULL | 0 | LEDs<4> | 1 | 14 | 49152
+
+FB_INSTANCE | FOOBAR4_ | dice_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | INPUTPINS_FOOBAR5_ | dice_COPY_0_COPY_0 | 0 | 0 | 0
+
+BUSINFO | LEDS<6:0> | 7 | 0 | 1 | LEDs<0> | 6 | LEDs<1> | 5 | LEDs<2> | 4 | LEDs<3> | 3 | LEDs<4> | 2 | LEDs<5> | 1 | LEDs<6> | 0
+
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 3 | button | 36 | 11 | tmp_Q<0>.FBK | NULL | 12 | Inst_activator/crst_FSM_FFd2.FBK | NULL | 13 | Inst_activator/crst_FSM_FFd1.FBK | NULL | 15 | tmp_Q<2>.FBK | NULL
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 17 | tmp_Q<1>.FBK | NULL | 22 | clk | 35
+
+FB_IMUX_INDEX | FOOBAR1_ | -1 | -1 | -1 | 79 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 11 | 12 | 13 | -1 | 15 | -1 | 17 | -1 | -1 | -1 | -1 | 103 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1
+
+
+FB_ORDER_OF_INPUTS | FOOBAR2_ | 0 | tmp_Q<1> | NULL | 1 | tmp_Q<2> | NULL | 2 | tmp_Q<0> | NULL
+
+FB_IMUX_INDEX | FOOBAR2_ | 999 | 999 | 999 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1
+
+
+FB_ORDER_OF_INPUTS | FOOBAR3_ | 0 | tmp_Q<1> | NULL | 1 | tmp_Q<2> | NULL | 2 | tmp_Q<0> | NULL
+
+FB_IMUX_INDEX | FOOBAR3_ | 999 | 999 | 999 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1
+
