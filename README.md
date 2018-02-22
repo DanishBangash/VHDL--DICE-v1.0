@@ -1,1 +1,1 @@
-# VHDL--DICE-v1.0 est-17-05-2011
+# VHDL--DICE-v1.0 Est. 17-05-2011
